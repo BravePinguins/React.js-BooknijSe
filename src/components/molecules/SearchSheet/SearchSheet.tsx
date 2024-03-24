@@ -2,6 +2,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { MagnifyingGlass } from "@assets/icons/magnifying-glass";
 import { TravelDateSelector } from "@components/molecules/TravelDateSelector/TravelDateSelector";
 import { TravelDirectionSelector } from "@components/molecules/TravelDirectionSelector/TravelDirectionSelector";
+import { TravelGuestsSelector } from "@components/molecules/TravelGuestsSelector/TravelGuestsSelector";
+import { NavTools } from "../NavTools/NavTools";
 
 export function SearchSheet() {
   return (
@@ -15,10 +17,14 @@ export function SearchSheet() {
       </SheetTrigger>
       <SheetContent
         side="top"
-        className="h-full flex flex-col justify-around items-center bg-zinc-100"
+        className="h-full flex flex-col justify-between items-center bg-zinc-100"
       >
-        <TravelDirectionSelector />
-        <TravelDateSelector />
+        <div className="flex flex-col gap-3">
+          <TravelDirectionSelector />
+          <TravelDateSelector />
+          <TravelGuestsSelector />
+        </div>
+        <NavTools />
       </SheetContent>
     </Sheet>
   );

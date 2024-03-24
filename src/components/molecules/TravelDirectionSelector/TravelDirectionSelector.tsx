@@ -5,7 +5,7 @@ import { DESTINATIONS } from "src/consts/destinations";
 
 export function TravelDirectionSelector() {
   return (
-    <div className="border-[1px] gap-5 p-3 bg-zinc-50 flex justify-center items-center flex-col shadow-2xl border-zinc-200 rounded-2xl w-full m-10">
+    <div className="border-[1px] gap-5 p-3 bg-zinc-50 flex mt-8 justify-center items-center flex-col shadow-2xl border-zinc-200 rounded-2xl w-full">
       <h2 className="self-start ml-5 text-[24px] font-bold">Gdzie jedziesz?</h2>
       <Sheet>
         <SheetTrigger className="h-14 w-11/12 flex pl-3 border-[1px] gap-5 items-center border-zinc-400 rounded-xl shadow-sm">
