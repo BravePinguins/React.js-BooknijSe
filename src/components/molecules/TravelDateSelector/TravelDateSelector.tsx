@@ -20,7 +20,10 @@ export function TravelDateSelector() {
           <div className="font-semibold">Podaj daty</div>
         </div>
       </SheetTrigger>
-      <SheetContent side="bottom" className="h-full flex justify-center">
+      <SheetContent side="bottom" className="h-full flex items-center flex-col">
+        <h2 className="font-bold self-start text-2xl ml-3 mt-3">
+          Kiedy planujesz podróż?
+        </h2>
         <Calendar
           mode="range"
           selected={date}
