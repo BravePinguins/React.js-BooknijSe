@@ -1,9 +1,10 @@
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { AdjustmentsHorizontal } from "@assets/icons/adjustments-horizaontal";
+
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function FiltersSheet() {
   return (
-    <div className="border-[1px] border-zinc-400 shadow-sm w-9 h-9 flex justify-center items-center rounded-full">
+    <div className="flex h-9 w-9 items-center justify-center rounded-full border-[1px] border-zinc-400 shadow-sm">
       <Sheet>
         <SheetTrigger>
           <AdjustmentsHorizontal />

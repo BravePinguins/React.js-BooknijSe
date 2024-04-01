@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { DateRange, SelectRangeEventHandler } from "react-day-picker";
+
 import { Calendar } from "@/components/ui/calendar";
-import { SelectRangeEventHandler, DateRange } from "react-day-picker";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function TravelDateSelector() {
   const [date, setDate] = useState<DateRange | undefined>(undefined);
@@ -14,18 +15,18 @@ export function TravelDateSelector() {
 
   return (
     <Sheet>
-      <SheetTrigger className="flex border-[1px] gap-5 p-3 bg-zinc-50 justify-center items-center flex-col shadow-2xl border-zinc-200 rounded-2xl w-full">
-        <div className="flex justify-between w-11/12 text-sm">
+      <SheetTrigger className="flex w-full flex-col items-center justify-center gap-5 rounded-2xl border-[1px] border-zinc-200 bg-zinc-50 p-3 shadow-2xl">
+        <div className="flex w-11/12 justify-between text-sm">
           <div className="w-3 text-zinc-600">Kiedy</div>
           <div className="font-semibold">Podaj daty</div>
         </div>
       </SheetTrigger>
-      <SheetContent side="bottom" className="h-full flex justify-center">
+      <SheetContent side="bottom" className="flex h-full justify-center">
         <Calendar
           mode="range"
           selected={date}
           onSelect={handleDateSelect}
-          className="rounded-md border mt-10 h-fit"
+          className="mt-10 h-fit rounded-md border"
         />
       </SheetContent>
     </Sheet>
