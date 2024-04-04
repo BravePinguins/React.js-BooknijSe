@@ -1,6 +1,7 @@
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { AdjustmentsHorizontal } from "@assets/icons/adjustments-horizaontal";
 import { TypeOfPlace } from "../TypeOfPlace/TypeOfPlace";
+import { PriceRange } from "../PriceRange/PriceRange";
 
 export function FiltersSheet() {
   return (
@@ -11,6 +12,7 @@ export function FiltersSheet() {
         </SheetTrigger>
         <SheetContent className="h-full" side="bottom">
           <TypeOfPlace />
+          <PriceRange />
         </SheetContent>
       </Sheet>
     </div>
